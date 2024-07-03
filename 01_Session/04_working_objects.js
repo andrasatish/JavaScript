@@ -14,8 +14,6 @@ console.log(userDetails.location);
 console.log(userDetails.age);
 
 
-
-
 userDetails = {};
 //Adding key value pair to the object using dot notation - userDetails
 userDetails.name = 'Satish';
@@ -99,5 +97,25 @@ const employeeAddressValues = Object.values(employeeDetails.address);
 console.log(employeeAddressValues); //[ '9th Phase', 'Kukatpally' ]
 
 
+//How to find if object is empty or not?
+let personDetails = {name:'sudheer', age: 28, location: {street:'alamuru'}};
+personDetails = {};
+console.log(Object.keys(personDetails).length); // 0
+//NOTE: If we get 0 then object should be empty, otherthan 0 then object have some data.
+
+
+//Check if object have specific key or not.
+let student = { name:'sudheer', rollNumber: 20, address: { street:'mandapeta' } };
+console.log(student.name); //sudheer
+console.log(student.rollNumber) //20
+console.log(student.class); // undefined
+console.log(student.keys); // undefined
+console.log(student.address.street); // mandapeta
+
+// #hasOwnProperty() -> It is an predefined method which tell key is existed or not in the object.
+// If key is existed then it will give true, otherwise it will give/return false.
+console.log(student.hasOwnProperty('name')); //true
+console.log(student.hasOwnProperty('marks')); //false
+console.log(student.address.hasOwnProperty('street')); //true
 
 
