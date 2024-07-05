@@ -153,4 +153,7 @@ console.log(states); //[ 'AP', 'TZ', 'MH', 'GH', 'NH', 'TA', 'DG' ]
 
 states =  [ 'AP', 'TZ', 'MH', 'TG', 'NH', 'TA', 'DG' ];
 states.splice(3,1,'GH','BH');
-console.log(states); [ 'AP', 'TZ', 'MH', 'GH', 'BH', 'NH', 'TA', 'DG' ]
+console.log(states); //[ 'AP', 'TZ', 'MH', 'GH', 'BH', 'NH', 'TA', 'DG' ]
+
+
+//FILTER, EVERY, SOME, REDUCE, FINDINDEX, SET
