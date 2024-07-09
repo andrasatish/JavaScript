@@ -141,3 +141,91 @@ const ageGroup = (age) => {
 }
 console.log(ageGroup(90)) // SENIOR CITIZEN
 console.log(ageGroup(9)) // BOY/GIRL
+
+
+// LOGICAL OPERATORS: <,<=,>,>=, && (AND), || (OR), !==(NOT)
+
+// employee_name = 'sudheer' and location = 'hyderabad' -> VALID EMPLOYEE
+// AND OPERATION
+/* T && T && T && T => T
+ T && F && T && T => F
+ F && T && T && T => F
+ F && F && T && F => F */
+function employeeValidation(employee,location) {
+    let result = '';
+    if(employee == 'sudheer' && location == 'hyderabad'){
+        result = 'VALID EMPLOYEE!'
+    }else{
+        result = 'NOT A VALID EMPLOYEE!'
+    }
+    return result;
+    // return employee == 'sudheer' && location == 'hyderabad' ? 'VALID EMPLOYEE!' : 'NOT A VALID EMPLOYEE!'
+}
+const res = employeeValidation('sudheer','hyderabad');
+console.log(res);
+
+// OR OPERATION
+/* 
+ T || T || T || T => T
+ T || F || F || F => T
+ F || T || T || T => T
+ F || F || F || F => F */
+
+ // HR OR ADMIN they can able to access 'ACCESS ALL EMPLOYEE(S) DATA'
+ // OTHER ROLES they can able to access 'ACCESS ONLY LOGGED EMPLOYEES DATA'
+
+ const employeeAccess = (role) => {
+    const result = role == 'HR' || role == 'ADMIN' ? 'ACCESS ALL EMPLOYEE(S) DATA' : 'ACCESS ONLY LOGGED EMPLOYEES DATA';
+    // const result = 'ACCESS ALL EMPLOYEE(S) DATA'
+    return result;
+}
+
+console.log(employeeAccess('ADMIN'));
+
+
+// NOT OPERATOR
+// Experience not equal to 20 -> He is not a architech.
+
+// NOT IS A OPPOSITE OF EQUAL
+// 30 !== 20 => TRUE
+// 20 !== 20 => FALSE
+
+
+const verifyArchitechExp = (exp) => {
+    return exp != 20 ? 'HE IS NOT A ARCHITECH' : 'HE IS A ARCHITECH';
+}
+console.log(verifyArchitechExp(30));
+console.log(verifyArchitechExp(20));
+
+
+//  == vs ===
+// == always checks for the data/content
+const compareDoubleEqual = (numbers) => {
+    if(numbers.num1 == 20){
+        console.log('== COMPARE WITH NUMBERS ARE EQUAL')
+    }
+    if(numbers.num1 == '20'){
+        console.log('== COMPARE WITH NUMBER AND STRING ARE EQUAL')
+    }
+}
+
+compareDoubleEqual({num1: 20});
+
+// === always checks for the data/content and type of data.
+const compareTribleEqual = (numbers) => {
+    // 20 === 20 && number === number => T
+    if(numbers.num1 === 20){
+        console.log('=== COMPARE WITH NUMBERS 20 ARE EQUAL')
+    }
+    // 20 === 30 && number === number => F
+    if(numbers.num1 === 30){
+        console.log('=== COMPARE WITH NUMBERS 20 && 30 ARE EQUAL')
+    }
+    // 20 === '20' && number === string => F
+    if(numbers.num1 === '20'){
+        console.log('=== COMPARE WITH NUMBER AND STRING ARE EQUAL')
+    }
+}
+
+compareTribleEqual({num1: 20});
+
