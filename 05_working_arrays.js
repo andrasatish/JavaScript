@@ -1,6 +1,7 @@
 let fruits = [];
 
 //If you want to find the length of the array we can do with .length
+//.length will works for both arrays and string.
 const fruitsLength = fruits.length;
 console.log(fruitsLength);
 
@@ -49,6 +50,7 @@ console.log(states); // [ 'DLH', 'VZG', 'AP', 'TG', 'MH' ]
 
 //INCLUDES -> This method is used to check whether element is existed or not in the array.
 // If it is existed then it will return true otherwise it will return false.
+//INCLUDES works with arrays and string.
 states =  [ 'AP', 'TG', 'MH' ];
 console.log(states.includes('AP')); // true
 console.log(states.includes('NH')); // false
