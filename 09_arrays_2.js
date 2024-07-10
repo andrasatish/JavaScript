@@ -46,5 +46,10 @@ console.log('CHECK EACH ELEMENT :: ', checkEachElement); //CHECK EACH ELEMENT ::
 
 //SCENARIO-2 : Condition pass case
 states = ['Andhra','Telangana','Tamilnadu','Chennai'];
-const checkEveryElement = states.every((state)=> state.length >= 6);
+
+const checkEveryElement = (arr) => {
+    return arr.every((state)=> state.length >= 6)
+}
+
+checkEveryElement(states);
 console.log('checkEveryElement :: ', checkEveryElement); // checkEveryElement :: true
