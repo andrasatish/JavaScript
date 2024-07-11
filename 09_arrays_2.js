@@ -53,3 +53,32 @@ const checkEveryElement = (arr) => {
 
 checkEveryElement(states);
 console.log('checkEveryElement :: ', checkEveryElement); // checkEveryElement :: true
+
+
+
+//SOME -> It is used to check any one of the element should be match
+//It will return true and false
+// T + F + F + F => T
+states = ['Andhra','Telangana','Tamilnadu','Chennai'];
+const check = states.some((state)=> {
+    return state.length >= 8;
+});
+console.log('CHECK SOME :: ', check);  //CHECK SOME ::  true
+
+//FIND -> find is used to return the first matching element if array having mulitple elements or duplicates
+states = ['Andhra','Telangana','Tamilnadu','Chennai','Tamilnadu','Tamilnadu'];
+const findState = states.find((state)=> state === 'Tamilnadu'); //FIND STATE ::  Tamilnadu
+console.log('FIND STATE :: ', findState);
+
+//FINDINDEX -> find is used to return the first matching element if array having mulitple elements or duplicates
+states = ['Andhra','Telangana','Tamilnadu','Chennai','Tamilnadu','Tamilnadu'];
+const findIndexState = states.findIndex((state)=> state === 'Tamilnadu'); 
+console.log('FIND INDEX STATE :: ', findIndexState); // 2
+
+//SET -> It will return unique elements (It will delete duplicates)
+states = ['Andhra','Telangana','Tamilnadu','Chennai','Tamilnadu','Tamilnadu'];
+const uniqueStates = [...new Set(states)];
+console.log(uniqueStates); //[ 'Andhra', 'Telangana', 'Tamilnadu', 'Chennai' ]
+
+//REDUCE
+
