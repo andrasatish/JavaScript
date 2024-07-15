@@ -68,11 +68,30 @@ for(let i = 0; i <= house.length - 1; i++){
 // It is also used to update the values based on condition
 house = ['cot','tv','fridge','washing machine','car'];
 house.forEach((element, elementIndex) => {
-    console.log('EACH HOUSE : ', elementIndex, '-' ,element )
     if(element === 'car'){
         console.log('MAINTAINANCE ARE VERY HIGH!')
     }
 })
+
+/** 
+ * Filter Bajaj and TVS objects based on below Input.
+ */
+let bikes = [
+    {make:'baJaj',location: 'Hyderabad',id:10001},
+    {make:'Yamaha',location: 'Secundrabad',id:10002},
+    {make:'TVS',location: 'Pune',id:10003},
+    {make:'BMW',location: 'Madras',id:10004},
+];
+let requiredBikes = [];
+bikes.forEach((bike)=>{
+    if(bike['make'].toLowerCase() === 'bajaj' || bike['make'].toLowerCase() === 'tvs'){
+        let obj = {
+            make : bike.make,
+            location : bike.location
+        };
+        requiredBikes.push(obj);
+    }
+});
 
 //for-of -> It should work with only arrays.
 house = ['cot','tv','fridge','washing machine','car'];
@@ -102,3 +121,4 @@ for(const key in person){
      *  If you want to print values -> person[key]
      */
 }
+

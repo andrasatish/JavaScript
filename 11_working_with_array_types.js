@@ -3,6 +3,18 @@ const ranks = [101,102,300,105,110];
 const filterRank = ranks.filter((rank)=> rank >= 150);
 console.log('FILTER RANK :: ', filterRank); // [300]
 
+/** 
+ * Filter Bajaj and TVS objects based on below Input.
+ */
+let bikes = [
+    {make:'baJaj',location: 'Hyderabad',id:10001},
+    {make:'Yamaha',location: 'Secundrabad',id:10002},
+    {make:'TVS',location: 'Pune',id:10003},
+    {make:'BMW',location: 'Madras',id:10004},
+];
+const filterBikes = bikes.filter((bikeData)=> bikeData.make.toLowerCase() === 'bajaj' || bikeData.make.toLowerCase() === 'tvs')
+console.log('Filter Bikes :: ', filterBikes)
+
 
 //Working with objects.
 let employees = [
