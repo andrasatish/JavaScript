@@ -11,9 +11,9 @@ interface iAddress {
 
 interface iEmployeeData {
     name: string,
-    location: string,
-    id: number,
-    documents: iDoc[]
+    location: any, // any will accept any type of data (all datatypes)
+    id: string | number, //It will accept string or number
+    documents?: iDoc[] // ? mark is nothing but optional type
 }
 
 interface iDoc {
