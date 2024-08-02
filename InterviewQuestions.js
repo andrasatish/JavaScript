@@ -31,12 +31,12 @@
  * 23 (I). shallow copy vs deepcopy
  * 24 (I). self invoked functions or immediately invoked functions
  * 25 (I). function optional parameters[add(a?:number)], types [add(a:number)] and function default parameters[add(a:number = 20)] 
- * 26 (I). closures
- * 27 (I). call, apply and bind
- * 28 (I). primitive vs non-primitive
+ * 26 (I). closures (RM)
+ * 27 (I). call, apply and bind (RM)
+ * 28 (I). primitive vs non-primitive (RM)
  * 29 (I). Hoisting
  * 30 (I). typed language
  * 31 (I). callback hell
  * 32 (I). callback vs promise
- * 33 (I). Event Propagation and Event Bubbling 
+ * 33 (I). Event Propagation and Event Bubbling (RM) 
  */
