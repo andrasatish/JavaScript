@@ -119,3 +119,18 @@ console.log(student.hasOwnProperty('marks')); //false
 console.log(student.address.hasOwnProperty('street')); //true
 
 
+/**
+ * Dot Vs Square Notation
+ * Dot Notation: using . we can add or retreive the properties
+ * Square Notation: using [] notation we add or retreive the properties of object and we have other uses also
+ * If we have dynamic key then we need to use [] notation.
+ * If key starts with number you must need to use [] notation. 
+ * 
+ * Ex: square notation
+ * const obj = {
+ *    '123Name' : 'sudheer'
+ * }
+ * 
+ * obj.123Name //It should not work
+ * obj['123Name'] //It should work
+ */
