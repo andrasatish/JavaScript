@@ -65,7 +65,7 @@ const countEachChar = (str) => {
 console.log('Each Character Count ::: ', countEachChar(str))
 
 
-//SCENARIO-4 : Agg count based make wise
+//SCENARIO-4 : Agg count based make wise -> { RealMe: 500,   }
 const mobileSales = [
     { location: 'Hyderabad', make: 'RealMe', count : 200 },
     { location: 'Hyderabad', make: 'Nokia', count : 300 },
@@ -74,6 +74,20 @@ const mobileSales = [
     { location: 'Hyderabad', make: 'RealMe', count : 300 },
 ] 
 
+
+const aggMakeWise = (arr) => {
+  const agg = arr.reduce((a,c)=> { 
+    if(a[c.make]){
+        a[c.make] += c.count;
+    }else{
+        a[c.make] = c.count;
+    }
+    return a;
+  }, { })
+  return agg;
+}
+
+console.log('AGGREGATION MAKE WISE :::: ',aggMakeWise(mobileSales));
 
 
 
